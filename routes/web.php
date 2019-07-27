@@ -20,3 +20,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/voucher/show-voucher', 'VoucherController@showVoucherInfo');
 Route::post('/voucher/voucher-info', 'VoucherController@saveVoucherInfo');
+Route::get('/voucher/manage-voucher', 'VoucherController@manageVoucherInfo');

@@ -27,7 +27,12 @@ class VoucherController extends Controller
         else
             return back()->with('message', 'Failed to save voucher info');
 
+    }
+    public function manageVoucherInfo () {
+        $vouchers = Voucher::orderBy('id', 'desc')->get();
 
+
+        return view('admin.voucher.manage-voucher', ['vouchers' => $vouchers]);
     }
 
 
