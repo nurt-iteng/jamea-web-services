@@ -16,10 +16,11 @@ class CreateVouchersTable extends Migration
         Schema::create('vouchers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('voucher_number')->nullable();
+            $table->string('voucher_to');
             $table->date('voucher_date');
             $table->string('voucher_for');
             $table->text('voucher_description');
-            $table->float('total_amount_digit', 10,2);
+            $table->float('amount_digit', 10,2);
             $table->string('total_amount_word');
             $table->tinyInteger('publication_status');
             $table->timestamps();

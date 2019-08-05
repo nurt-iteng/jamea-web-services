@@ -17,7 +17,7 @@
             @endif
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal" action="{{ url('/voucher/voucher-info') }}" method="POST">
+            <form name="add_name" id="add_name" class="form-horizontal" action="{{ url('/voucher/voucher-info') }}" method="POST">
                 {{ csrf_field() }}
                 <div class="box-body">
                     <div class="form-group">
@@ -25,6 +25,14 @@
 
                         <div class="col-sm-8">
                             <input type="number" name="voucher_number" class="form-control" id="voucher_number" placeholder="ভাউচার নং" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">প্রদানকারীর নাম</label>
+
+                        <div class="col-sm-8">
+                            <input type="text" name="voucher_to" class="form-control" id="voucher_number" placeholder="প্রদানকারীর নাম দিন" required>
                         </div>
                     </div>
 
@@ -53,10 +61,10 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-4 control-label">মোট টাকা (অংকে)</label>
+                        <label for="inputEmail3" class="col-sm-4 control-label">টাকার পরিমান (অংকে)</label>
 
                         <div class="col-sm-8">
-                            <input type="number" name="total_amount_digit" class="form-control" id="total_amount_digit" placeholder="অংকে" required>
+                            <input type="number" name="amount_digit" class="form-control" id="amount_digit" placeholder="টাকার পরিমান দিন" required>
                         </div>
                     </div>
 
@@ -79,7 +87,6 @@
                             </select>
                         </div>
                     </div>
-
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
