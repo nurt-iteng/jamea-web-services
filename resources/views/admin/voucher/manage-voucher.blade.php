@@ -11,7 +11,10 @@
 @section('main-content')
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Show Voucher Info</h3>
+{{--            <h3 class="box-title">Show Voucher Info</h3>--}}
+            <div align="right" style="padding-bottom: 10px">
+                <a href="{{ url('/voucher/show-voucher') }}" class="btn btn-success btn-sm" title="ADD NEW VOUCHER"><span class="glyphicon glyphicon-plus"></span></a>
+            </div>
             @if( $message = Session::get('message') )
                 <h2 class="text-center text-success">{{ $message }}</h2>
             @endif
@@ -51,11 +54,11 @@
                         </a>
                         @endif
                         <a href="{{ url('/voucher/view-voucher/'.$voucher->id) }}" class="btn btn-info btn-xs" title="Edit Voucher Info">
-                            <span class="glyphicon glyphicon-zoom-out"></span>
+                            <span class="glyphicon glyphicon-zoom-in"></span>
                         </a>
-                        <a href="{{ url('/voucher/view-pdf/'.$voucher->id) }}" class="btn btn-primary btn-xs" title="View As PDF">
-                            <span class="fa fa-file-pdf-o"></span>
-                        </a>
+{{--                        <a href="{{ url('/voucher/view-pdf/'.$voucher->id) }}" class="btn btn-primary btn-xs" title="View As PDF">--}}
+{{--                            <span class="fa fa-file-pdf-o"></span>--}}
+{{--                        </a>--}}
                         <a href="{{ url('/voucher/edit-voucher/'.$voucher->id) }}" class="btn btn-info btn-xs" title="Edit Voucher Info">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
